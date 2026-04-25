@@ -29,3 +29,16 @@ function muslim_theme_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'muslim_theme_styles');
+
+
+function muslim_theme_setup() {
+    // Add support for dynamic title tags
+    add_theme_support('title-tag');
+    //menu setup
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'muslim-portfolio'),
+        )
+    );
+}
+add_action('after_setup_theme', 'muslim_theme_setup');

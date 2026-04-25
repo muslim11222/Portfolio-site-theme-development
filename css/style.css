@@ -283,13 +283,20 @@ header::before{
 
 /* ============About==============*/
 
-
-
-
 .about {
   text-align: center;
 
 }
+.nav_menu{
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.nav_menu li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
 
 .about_container {
   display: flex;
