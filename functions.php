@@ -42,3 +42,39 @@ function muslim_theme_setup() {
     );
 }
 add_action('after_setup_theme', 'muslim_theme_setup');
+
+  //Header section start  
+
+    function customize_register_header($wp_customize){
+
+        //section
+           
+        $wp_customize->add_section('header_section', array(
+            'title' => 'Header Settings',
+        ));
+         // Image
+        $wp_customize->add_setting('header_image');
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'header_image',
+            array(
+                'label' => 'Header Image',
+                'section' => 'header_section',
+            )
+        ));
+
+        //text 1
+        $wp_customize->add_setting('header_text_1');
+        $wp_customize->add_control('header_text_1', array(
+            'label' => 'Text 1',
+            'section' => 'header_section',
+            'type' => 'text'
+        ));
+    }
+    add_action('customize_register', 'customize_register_header');
+
+
+
+
+
+  //Header section start   

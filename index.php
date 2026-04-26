@@ -10,7 +10,7 @@
 
         <div class="header_left">
           <div class="header_left_img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/Guy.png" alt="Guy.png">
+            <img src="<?php echo get_theme_mod('header_image'); ?>" alt="">
           </div>
         </div>
 
