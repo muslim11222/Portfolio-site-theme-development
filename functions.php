@@ -58,7 +58,7 @@ add_action('after_setup_theme', 'muslim_theme_setup');
             $wp_customize,
             'header_image',
             array(
-                'label' => 'Header Image',
+                'label'   => 'Header Image',
                 'section' => 'header_section',
             )
         ));
@@ -66,9 +66,40 @@ add_action('after_setup_theme', 'muslim_theme_setup');
         //text 1
         $wp_customize->add_setting('header_text_1');
         $wp_customize->add_control('header_text_1', array(
-            'label' => 'Text 1',
+            'label'   => 'Text 1',
             'section' => 'header_section',
-            'type' => 'text'
+            'type'    => 'text'
+        ));
+
+        //text 2
+        $wp_customize->add_setting('header_text_2');
+        $wp_customize->add_control('header_text_2', array(
+            'label'   => 'Text 2',
+            'section' => 'header_section',
+            'type'    => 'text'
+        ));
+
+         //text 3
+        $wp_customize->add_setting('header_text_3');
+        $wp_customize->add_control('header_text_3', array(
+            'label'   => 'Text 3',
+            'section' => 'header_section',
+            'type'    => 'text'
+        ));
+
+         //button link
+        $wp_customize->add_setting('header_button_link');
+        $wp_customize->add_control('header_button_link', array(
+            'label'   => 'Button link',
+            'section' => 'header_section',
+            'type'    => 'text'
+        ));
+         //button text
+        $wp_customize->add_setting('header_btn_text');
+        $wp_customize->add_control('header_btn_text', array(
+            'label'   => 'Button text',
+            'section' => 'header_section',
+            'type'    => 'text'
         ));
     }
     add_action('customize_register', 'customize_register_header');

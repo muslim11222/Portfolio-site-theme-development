@@ -17,10 +17,10 @@
 
 
         <div class="header_right">
-          <div class="text_1">Hello this is</div>
-          <div class="text_2">Muslim Khan</div>
-          <div class="text_3">And I'm a <span class="typing"></span></div>
-          <a href="https://www.facebook.com/profile.php?id=100036457710676&mibextid=ZbWKwL" class="btn">Hire Me</a>
+          <div class="text_1"><?php echo get_theme_mod('header_text_1'); ?></div>
+          <div class="text_2"><?php echo get_theme_mod('header_text_2'); ?></div>
+          <div class="text_3"><?php echo get_theme_mod('header_text_3'); ?> <span class="typing"></span></div>
+          <a href="<?php echo get_theme_mod('header_btn_link'); ?>" class="btn"><?php echo get_theme_mod('header_btn_text'); ?></a>
         </div>  
       </div>
     </header>
