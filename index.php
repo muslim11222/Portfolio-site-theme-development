@@ -32,32 +32,25 @@
 
 
     <section class="about" id="about">
-        <h2 class="border_bottom">About Me</h2>
+        <h2 class="border_bottom"> <?php echo get_theme_mod('About_text'); ?> </h2>
         <div class="container about_container">
           <div class="about-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/mulim.png" alt="">
+            <img src="<?php echo get_theme_mod('about_image') ?>" alt="">
           </div>
 
           <div class="about-text">
             <div class="text">
-              I am Muslim And I'm a <span class="typing-2"></span>
+              <?php echo get_theme_mod('About_short_text'); ?> <span class="typing-2"></span>
             </div>
             <p>
-              I have come from Bogura.I have complete my graguation in Islamik history and culture from Dhunat Degree collage.Dhunat,Bogura 
-              I have 6 month of experience doing as Web Development. finally,I would like to express my future goal joing this sector,And ji want to serve the country.
+              <?php echo get_theme_mod('About_description'); ?>
             </p>
-            <a href="
-            https://www.facebook.com/profile.php?id=100036457710676&mibextid=ZbWKwL" class="btn">Download CV</a>
+            <a href=" <?php echo get_theme_mod('About_Download_link'); ?> " class="btn">Download CV</a>
           </div>
         </div>
     </section>
 
   <!-- About Me section End Here  -->
-
-
-
-
-
 
   <!-- My Service Section Start Here  -->
 

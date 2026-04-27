@@ -104,8 +104,58 @@ add_action('after_setup_theme', 'muslim_theme_setup');
     }
     add_action('customize_register', 'customize_register_header');
 
-
-
-
-
   //Header section start   
+
+
+  // About section start here
+
+    function about_section_customize($wp_customize){
+        $wp_customize->add_section('about_section', array(
+            'title' => 'About Section Settings',
+        ));
+        // image
+        $wp_customize->add_setting('about_image');
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'about_image',
+            array(
+                'label'   => 'About Image',
+                'section' => 'about_section',
+            )
+        ));
+
+        //about text
+        $wp_customize->add_setting('About_text');
+        $wp_customize->add_control('About_text', array(
+            'label'   => 'About text',
+            'section' => 'about_section',
+            'type'    => 'text'
+        ));
+
+        
+        //about short text
+        $wp_customize->add_setting('About_short_text');
+        $wp_customize->add_control('About_short_text', array(
+            'label'   => 'About Short Text',
+            'section' => 'about_section',
+            'type'    => 'text'
+        ));
+         //description
+        $wp_customize->add_setting('About_description');
+        $wp_customize->add_control('About_description', array(
+            'label'   => 'About Description',
+            'section' => 'about_section',
+            'type'    => 'text'
+        ));
+
+          //About_Download_link
+        $wp_customize->add_setting('About_Download_link');
+        $wp_customize->add_control('About_Download_link', array(
+            'label'   => 'About Download Link',
+            'section' => 'about_section',
+            'type'    => 'text'
+        ));
+    }
+    add_action('customize_register', 'about_section_customize');
+
+  // About section end here

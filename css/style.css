@@ -309,10 +309,9 @@ header::before{
 
 .about_container .about-img {
   border: 3px solid var(--primary);
-  border-radius: 50%;
+  border-radius: 10%;
   overflow: hidden;
-  max-width: 12.5rem;
-  max-height: 12.5rem;
+ 
   margin-right: 2rem;
   position: relative;
   align-items: center;
