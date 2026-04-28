@@ -159,3 +159,29 @@ add_action('after_setup_theme', 'muslim_theme_setup');
     add_action('customize_register', 'about_section_customize');
 
   // About section end here
+
+// My Services section start here 
+
+    function my_services_customize($wp_customize){
+        $wp_customize->add_section('my_services_section', array(
+            'title' => 'My Services Section Settings',
+        ));
+
+        //service 1
+        $wp_customize->add_setting('service_1');
+        $wp_customize->add_control('service_1', array(
+            'label'   => 'Service 1',
+            'section' => 'my_services_section',
+            'type'    => 'text'
+        ));
+
+     
+
+         
+    }
+    add_action('customize_register', 'my_services_customize');
+
+
+// My Services section end here 
+
+

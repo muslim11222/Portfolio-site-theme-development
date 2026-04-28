@@ -55,7 +55,7 @@
   <!-- My Service Section Start Here  -->
 
     <div class="services" id="service">
-      <h2 class="border_bottom">My Services</h2>
+      <h2 class="border_bottom"> <?php echo get_theme_mod('service_1'); ?> </h2>
       <div class="container services_container">
         <div class="cards">
           <div class="card">
