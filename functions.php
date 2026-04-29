@@ -34,6 +34,8 @@ add_action('wp_enqueue_scripts', 'muslim_theme_styles');
 function muslim_theme_setup() {
     // Add support for dynamic title tags
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+
     //menu setup
     register_nav_menus(
         array(

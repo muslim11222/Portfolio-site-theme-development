@@ -53,46 +53,30 @@
   <!-- About Me section End Here  -->
 
   <!-- My Service Section Start Here  -->
+<div class="services" id="service">
+    <h2 class="border_bottom"><?php echo get_theme_mod('service_1'); ?></h2>
 
-    <div class="services" id="service">
-      <h2 class="border_bottom"> <?php echo get_theme_mod('service_1'); ?> </h2>
-      <div class="container services_container">
+    <div class="container services_container">
         <div class="cards">
-          <div class="card">
-            <div class="sbox">
-              <i class="fa-solid fa-code"></i>
-              <h3>Web Desing</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati dolores deserunt aliquam non incidunt voluptas, quaerat earum expedita molestias. Quae tempore incidunt odio sapiente tempora neque! Dolorem, distinctio? Nemo?</p>
-              <a href="#">Learn More</a>
-            </div>
-          </div>
-
-
-
-          <div class="card">
-            <div class="sbox">
-              <i class="fa-solid fa-file-code"></i>
-              <h3>PSD to HTML</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati dolores deserunt aliquam non incidunt voluptas, quaerat earum expedita molestias. Quae tempore incidunt odio sapiente tempora neque! Dolorem, distinctio? Nemo?</p>
-              <a href="#">Learn More</a>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="card">
-            <div class="sbox">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h3>Web Development</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati dolores deserunt aliquam non incidunt voluptas, quaerat earum expedita molestias. Quae tempore incidunt odio sapiente tempora neque! Dolorem, distinctio? Nemo?</p>
-              <a href="#">Learn More</a>
-            </div>
-          </div>
+            <?php
+            $query = new WP_Query(array(
+                'post_type'      => 'post',
+                'posts_per_page' => 3
+            ));
+            while($query->have_posts()) : $query->the_post();
+            ?>
+                <div class="card">
+                    <div class="sbox">
+                        <?php the_post_thumbnail('medium', array('class' => 'service-img')); ?>
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php echo wp_trim_words(get_the_content(), 30, '.....') ?></p>
+                        <a href="<?php the_permalink(); ?>">Learn More</a>
+                    </div>
+                </div>
+            <?php endwhile; wp_reset_postdata(); ?>
         </div>
-      </div>
     </div>
+</div>
 <!-- My Service Section End Here  -->
 
 
