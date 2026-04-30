@@ -36,29 +36,20 @@
 
 <!-- Single Post Section Start -->
 <div class="single-post-wrapper">
-
     <h2 class="single-post-heading">
         <?php echo get_theme_mod('service_1'); ?>
     </h2>
-
     <div class="single-post-container">
-
         <div class="single-post-card">
-
-            <?php the_post_thumbnail('medium', array('class' => 'single-post-image')); ?>
-
+           <?php the_post_thumbnail('medium', array('class' => 'single-post-image')); ?>
             <h3 class="single-post-title"><?php the_title(); ?></h3>
-
             <p class="single-post-content">
                 <?php echo wp_trim_words(get_the_content(), 30, '.....'); ?>
             </p>
-
             <a class="single-post-btn" href="<?php the_permalink(); ?>">
                 Learn More
             </a>
-
         </div>
-
     </div>
 </div>
 <!-- Single Post Section End -->

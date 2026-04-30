@@ -347,7 +347,7 @@ header::before{
 
 /* single*/
 .single-post-wrapper{
-   margin-top: 80px;
+   margin-top: 120px;
    width: 100%;
 }
 
@@ -356,6 +356,10 @@ header::before{
    max-width: 1000px;
    margin: auto;
    padding: 20px;
+   
+}
+.single-post-heading{
+  text-align: center;
 }
 
 .single-post-card{
@@ -376,12 +380,14 @@ header::before{
 .single-post-title{
    margin-top: 20px;
    font-size: 28px;
+   color: #0c1013;
 }
 
 .single-post-content{
    margin-top: 15px;
    line-height: 1.8;
    font-size: 16px;
+   color: #0c1013;
 }
 
 .single-post-btn{
