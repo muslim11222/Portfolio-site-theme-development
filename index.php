@@ -89,13 +89,13 @@
 
   <div class="skills" id="skills">
     <div class="new">
-      <h2 class="border_bottom">My Skills</h2>
+      <h2 class="border_bottom"><?php echo get_theme_mod('skill_1') ?></h2>
     </div>
 
     <div class="container skills_container">
       <div class="bar">
         <div class="info">
-          <span>HTML</span>
+          <span><?php echo get_theme_mod('html_bar_text'); ?></span>
         </div>
 
         <div class="progress-line html">
@@ -107,7 +107,7 @@
 
       <div class="bar">
         <div class="info">
-          <span>CSS</span>
+          <span><?php echo get_theme_mod('css_bar_text') ?></span>
         </div>
 
         <div class="progress-line css">
@@ -118,7 +118,7 @@
 
       <div class="bar">
         <div class="info">
-          <span>JAVASCRIPT</span>
+          <span><?php echo get_theme_mod('js_bar_text') ?></span>
         </div>
 
         <div class="progress-line javascript">
@@ -129,7 +129,7 @@
 
       <div class="bar">
         <div class="info">
-          <span>PHP</span>
+          <span><?php echo get_theme_mod('php_bar_text') ?></span>
         </div>
 
         <div class="progress-line php">
@@ -141,7 +141,7 @@
 
       <div class="bar">
         <div class="info">
-          <span>MySQL</span>
+          <span><?php echo get_theme_mod('mysql_bar_text') ?></span>
         </div>
 
         <div class="progress-line MySQL">

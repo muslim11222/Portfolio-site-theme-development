@@ -175,15 +175,71 @@ add_action('after_setup_theme', 'muslim_theme_setup');
             'label'   => 'Service 1',
             'section' => 'my_services_section',
             'type'    => 'text'
-        ));
-
-     
-
-         
+        ));  
     }
     add_action('customize_register', 'my_services_customize');
-
 
 // My Services section end here 
 
 
+
+// My Skills area section
+
+function my_skills_section_area($wp_customize){
+    $wp_customize->add_section('my_skills_section', array(
+        'title' => 'My Skills Section Settings',
+    ));
+
+    //skill 1
+    $wp_customize->add_setting('skill_1');
+    $wp_customize->add_control('skill_1', array(
+        'label'   => 'Skill 1',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    ));  
+
+
+      //html
+    $wp_customize->add_setting('html_bar_text');
+    $wp_customize->add_control('html_bar_text', array(
+        'label'   => 'Html Text ',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    )); 
+
+    //css
+    $wp_customize->add_setting('css_bar_text');
+    $wp_customize->add_control('css_bar_text', array(
+        'label'   => 'Css Text ',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    ));  
+
+    // JAVASCRIPT
+    $wp_customize->add_setting('js_bar_text');
+    $wp_customize->add_control('js_bar_text', array(
+        'label'   => 'Javascript Text ',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    ));
+    // PHP
+    $wp_customize->add_setting('php_bar_text');
+    $wp_customize->add_control('php_bar_text', array(
+        'label'   => 'PHP Text ',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    )); 
+
+    // MySQL
+    $wp_customize->add_setting('mysql_bar_text');
+    $wp_customize->add_control('mysql_bar_text', array(
+        'label'   => 'MySQL Text ',
+        'section' => 'my_skills_section',
+        'type'    => 'text'
+    ));
+       
+
+}
+add_action('customize_register', 'my_skills_section_area');
+
+// My Skills area section
