@@ -243,3 +243,25 @@ function my_skills_section_area($wp_customize){
 add_action('customize_register', 'my_skills_section_area');
 
 // My Skills area section
+
+
+// My Portfolio section here 
+
+function My_Portfolio_section_customize($wp_customize){
+    $wp_customize->add_section('My_Portfolio', array(
+            'title' => 'Portfolio Settings',
+        ));
+         // Image
+        $wp_customize->add_setting('portfolio_image');
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'portfolio_image',
+            array(
+                'label'   => 'Portfolio Image',
+                'section' => 'My_Portfolio',
+            )
+        ));
+}
+add_action('customize_register', 'My_Portfolio_section_customize');
+
+// My Portfolio section here 
