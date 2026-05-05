@@ -161,15 +161,31 @@
 
   <div class="container portfilio_container" id="portfolio">
     <h2 class="border_bottom">My Portfolio</h2>
+
     <div class="gallery">
-      <a href="img/portfolio1.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio1.png" alt="portfolio1.png"></a>
-      <a href="img/portfolio2.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio2.png" alt="portfolio2.png"></a>
-      <a href="img/portfolio3.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio3.png" alt="portfolio3.png"></a>
-      <a href="img/portfolio4.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio4.png" alt="portfolio4.png"></a>
-      <a href="img/portfolio5.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio5.png" alt="portfolio5.png"></a>
-      <a href="img/portfolio6.png"><img src="<?php echo get_template_directory_uri(); ?>/img/portfolio6.png" alt="portfolio6.png"></a>
+        <?php 
+        $args = array(
+            'post_type' => 'portfolio',
+            'posts_per_page' => 3
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post(); ?>
+
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail('medium'); ?>
+                </a>
+
+            <?php endwhile;
+            wp_reset_postdata();
+        else :
+            echo '<p>No portfolio found</p>';
+        endif;
+        ?>
+    </div>
 </div>
-  </div>
 
 <!-- My potfilio Section End Here  -->
 <!-- My Course Section Start Here  -->

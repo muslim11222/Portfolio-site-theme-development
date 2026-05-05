@@ -247,21 +247,14 @@ add_action('customize_register', 'my_skills_section_area');
 
 // My Portfolio section here 
 
-function My_Portfolio_section_customize($wp_customize){
-    $wp_customize->add_section('My_Portfolio', array(
-            'title' => 'Portfolio Settings',
-        ));
-         // Image
-        $wp_customize->add_setting('portfolio_image');
-        $wp_customize->add_control(new WP_Customize_Image_Control(
-            $wp_customize,
-            'portfolio_image',
-            array(
-                'label'   => 'Portfolio Image',
-                'section' => 'My_Portfolio',
-            )
-        ));
+function create_portfolio_post_type() {
+    register_post_type('portfolio',
+        array(
+            'public' => true,
+            'supports' => array('thumbnail'),
+        )
+    );
 }
-add_action('customize_register', 'My_Portfolio_section_customize');
+add_action('init', 'create_portfolio_post_type');
 
 // My Portfolio section here 
