@@ -1,11 +1,15 @@
+
+
+
+
 <!-- My footer Section Start Here  -->
     <footer>
       <div class="container footer_container">
         <div class="footer_1">
             <a href="index.html" class="footer_logo">
-              <h4>MUSLIM</h4>
+              <h4><?php bloginfo('name') ?></h4>
             </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolor sint ipsum.</p>
+            <p><?php echo get_theme_mod('footer_description') ?></p>
         </div>
 
 

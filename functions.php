@@ -244,6 +244,30 @@ add_action('customize_register', 'my_skills_section_area');
 
 // My Skills area section
 
+// footer section start here
+function footer_customize($wp_customize){
+    $wp_customize->add_section('footer_section', array(
+        'title' => 'Footer Section Settings',
+    ));
+
+    //footer text
+    $wp_customize->add_setting('footer_text');
+    $wp_customize->add_control('footer_text', array(
+        'label'   => 'Footer Text',
+        'section' => 'footer_section',
+    ));  
+
+     //description
+    $wp_customize->add_setting('footer_description');
+    $wp_customize->add_control('footer_description', array(
+        'label'   => 'Footer Description',
+        'section' => 'footer_section',
+        'text_area'    => 'text'
+    ));
+}
+add_action('customize_register', 'footer_customize');
+// footer section start here
+
 
 // My Portfolio section here 
 
